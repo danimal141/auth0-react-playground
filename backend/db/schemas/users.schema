@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table :users, options: 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4', force: :cascade do |t|
+  t.string :auth_id, null: false, comment: 'Auth0 ID'
+  t.timestamps
+
+  t.index ['auth_id'], name: 'idx_users_on_auth_id', unique: true
+end

@@ -1,0 +1,117 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - Schemafile
+    - Guardfile
+    - vendor/**/*
+    - bin/**
+    - db/schema.rb
+    - db/migrate/*
+    - node_modules/**/*
+    - tmp/**/*
+    - public/**/*
+  DisplayCopNames: true
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Environments:
+    - test
+    - development
+    - staging
+    - production
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/sitemap.rb'
+    - 'config/routes/**'
+    - 'factories/**/*'
+    - 'spec/**/*'
+    - 'config/environments/*'
+
+Layout/LineLength:
+  Max: 128
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/OutputSafety:
+  Exclude:
+    - 'spec/**/*'
+
+Rails/SkipsModelValidations:
+  Exclude:
+    - 'spec/**/*'
+
+Layout/ParameterAlignment:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/NumericLiterals:
+  MinDigits: 10
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%': '{}'
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  AllowForAlignment: true
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses
+
+Style/MultilineBlockChain:
+  Enabled: false

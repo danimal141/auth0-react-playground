@@ -1,0 +1,9 @@
+entity users {
+  * id : bigint(20)
+  --
+  * sub : varchar(255)
+  * created_at : datetime
+  * updated_at : datetime
+  --
+  idx_users_on_sub (sub)
+}

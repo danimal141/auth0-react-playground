@@ -1,0 +1,3 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Dir[File.dirname(__FILE__) + '/db/schemas/**/*.schema'].each { |file| require file }
