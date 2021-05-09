@@ -17,7 +17,6 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
-    "actioncable": "^5.2.4-5",
     "eslint-config-prettier": "^7.2.0",
     "graphql": "^15.5.0",
     "graphql-ruby-client": "^1.9.2",

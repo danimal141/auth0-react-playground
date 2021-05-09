@@ -17,6 +17,8 @@ module Authenticatable
 
   def auth_payload
     auth_payload, = retrieve_auth_token
+    p '---------'
+    pp auth_payload
     auth_payload
   rescue JWT::VerificationError, JWT::DecodeError, ActiveRecord::RecordInvalid
     nil
