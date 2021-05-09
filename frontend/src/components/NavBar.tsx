@@ -6,8 +6,12 @@ import SignUpButton from "../components/SignUpButton";
 import LogoutButton from "../components/LogoutButton";
 
 const NavBar = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
   console.log(`isAuthenticated: ${isAuthenticated}`);
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div>
