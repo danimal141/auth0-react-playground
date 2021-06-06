@@ -7,7 +7,6 @@ import LogoutButton from "../components/LogoutButton";
 
 const NavBar = () => {
   const { isLoading, isAuthenticated } = useAuth0();
-  console.log(`isAuthenticated: ${isAuthenticated}`);
 
   if (isLoading) {
     return null;

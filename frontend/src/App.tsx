@@ -23,6 +23,7 @@ const App = (): JSX.Element => {
       redirectUri={`${window.location.origin}/mypage`}
       onRedirectCallback={onRedirectCallback}
       useRefreshTokens={useRefreshTokens}
+      cacheLocation="localstorage"
     >
       <AuthorizedProvider>
         <BrowserRouter>
