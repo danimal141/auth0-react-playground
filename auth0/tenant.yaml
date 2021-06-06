@@ -18,7 +18,7 @@ pages:
 resourceServers:
   - name: IshiiUserAPI
     identifier: IshiiUserAPI
-    allow_offline_access: true
+    allow_offline_access: true # it needs to use refresh_token rotation
     enforce_policies: true
     scopes:
       - value: 'read:users'
