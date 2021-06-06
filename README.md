@@ -19,3 +19,9 @@ In this project, I use Ruby on Rails (with graphql-ruby) and React.js.
 1. `yarn install`
 1. `yarn codegen` (if some graphql is updated)
 1. `yarn start`
+
+
+### Auth0
+1. `cd auth0`
+1. `cp config.sample.json config.json` (and update it)
+1. `a0deploy deploy -c config.json -i tenant.yaml`
