@@ -11,9 +11,9 @@ import { createBrowserHistory } from "history";
 const App = (): JSX.Element => {
   const history = createBrowserHistory();
   const onRedirectCallback = (appState: AppState) => {
-    const path = appState?.returnTo || window.location.pathname;
-    history.replace(path);
+    history.push(appState?.returnTo || window.location.pathname);
   };
+  const useRefreshTokens = true;
 
   return (
     <Auth0Provider
@@ -22,6 +22,7 @@ const App = (): JSX.Element => {
       audience={process.env.REACT_APP_AUTH0_AUDIENCE}
       redirectUri={`${window.location.origin}/mypage`}
       onRedirectCallback={onRedirectCallback}
+      useRefreshTokens={useRefreshTokens}
     >
       <AuthorizedProvider>
         <BrowserRouter>

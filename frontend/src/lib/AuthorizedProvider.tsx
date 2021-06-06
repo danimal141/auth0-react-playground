@@ -15,8 +15,6 @@ const AuthorizedProvider: React.FC = ({ children }) => {
     const token = await getAccessTokenSilently({
       audience: process.env.REACT_APP_AUTH0_AUDIENCE,
     });
-    console.log("------accessToken");
-    console.log(token);
     return {
       headers: {
         ...headers,
