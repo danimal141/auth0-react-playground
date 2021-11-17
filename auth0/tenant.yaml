@@ -2,14 +2,18 @@ rules:
   - name: addEmailToAccessToken
     script: ./rules/addEmailToAccessToken.js
     stage: login_success
-    enabled: false
+    enabled: true
     order: 3
   - name: assignUserRole
     script: ./rules/assignUserRole.js
     stage: login_success
     enabled: true
     order: 1
-rulesConfigs: []
+rulesConfigs:
+  - key: 'namespace'
+    value: @@NAMESPACE@@
+  - key: 'userRoleId'
+    value: @@USER_ROLE_ID@@
 hooks: []
 pages:
   - name: login
@@ -205,13 +209,45 @@ connections:
       - Default App
       - Deploy App
       - IshiiUserAPI
+      - IshiiUserApp
     is_domain_connection: false
     options:
       email: true
+      gmail: false
+      orkut: false
       scope:
         - email
         - profile
+      sites: false
+      tasks: false
+      blogger: false
       profile: true
+      youtube: false
+      calendar: false
+      contacts: false
+      analytics: false
+      client_id: 414370097965-kltqvrn5itelpp0duttcs5fr02iq27bm.apps.googleusercontent.com
+      moderator: false
+      coordinate: false
+      picasa_web: false
+      google_plus: false
+      google_books: false
+      google_drive: false
+      spreadsheets: false
+      client_secret: Sr4J0eyf44lL0Bu3RCvZJ6Kn
+      document_list: false
+      latitude_best: false
+      latitude_city: false
+      url_shortener: false
+      webmaster_tools: false
+      chrome_web_store: false
+      allowed_audiences: ''
+      adsense_management: false
+      google_drive_files: false
+      coordinate_readonly: false
+      google_cloud_storage: false
+      content_api_for_shopping: false
+      google_affiliate_network: false
 tenant:
   enabled_locales:
     - ja

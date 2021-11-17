@@ -25,6 +25,9 @@ gem 'pry-rails'
 gem 'rack-cors'
 gem 'ridgepole'
 
+gem 'omniauth-auth0', '~> 3.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
 gem 'redis'
 
 # Reduces boot times through caching; required in config/boot.rb

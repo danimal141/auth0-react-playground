@@ -5,6 +5,6 @@
   "AUTH0_ALLOW_DELETE": false,
   "AUTH0_KEYWORD_REPLACE_MAPPINGS": {
     "NAMESPACE": "'http://localhost:3000/",
-    "USER_ROLE_ID": "rol_HbpQsfwTB0HNlLId"
+    "USER_ROLE_ID": ""
   }
 }

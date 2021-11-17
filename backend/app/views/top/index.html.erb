@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Core</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+
+  <body onLoad='document.forms[0].submit()'>
+    <div style='display: none'>
+      <%= button_to 'Login', '/auth/auth0?connection=UserConnection&email=newemail@gmail.com', method: :post %>
+    </div>
+  </body>
+</html>
